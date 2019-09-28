@@ -303,6 +303,40 @@ service vendor.dataqti /vendor/bin/qti
     user radio
     group radio oem_2901 usb
 
+   class core
+   user root
+   writepid /dev/cpuset/system-background/tasks
+
+on property:vendor.wc_transport.start_hci=true
+    start vendor.start_hci_filter
+
+on property:vendor.wc_transport.start_hci=false
+    stop vendor.start_hci_filter
+
+service vendor.start_hci_filter /system/vendor/bin/wcnss_filter
+    class late_start
+    user bluetooth
+    group bluetooth diag system wakelock
+    seclabel u:r:bluetooth:s0
+    disabled
+
+on property:bluetooth.hciattach=true
+    setprop bluetooth.status on
+
+on property:bluetooth.hciattach=false
+    setprop bluetooth.status off
+
+service atfwd /vendor/bin/ATFWD-daemon
+    class late_start
+    user system
+    group system radio
+    writepid /dev/cpuset/system-background/tasks
+
+service vendor.sensors /vendor/bin/sscrpcd
+    class core
+    user system
+    group system
+    writepid /dev/cpuset/system-background/tasks
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user root
