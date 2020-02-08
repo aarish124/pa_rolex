@@ -100,14 +100,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    libldacBT_dec \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
-    liba2dpoffload
-
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8937 \
