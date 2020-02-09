@@ -1,0 +1,8 @@
+{
+ {
+    "remote":     "github",
+    "repository": "mscalindt/android-kernel-rosy",
+    "target_path": "kernel/xiaomi/rosy",
+    "revision":    "q-3.18-upstream"
+  }
+}
