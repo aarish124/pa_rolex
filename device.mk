@@ -103,8 +103,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libldacBT_dec \
-    android.hardware.bluetooth@1.0-impl \
-    android.hardware.bluetooth@1.0-service \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     liba2dpoffload
 
 
