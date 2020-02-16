@@ -409,6 +409,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
+# Whitelisted app
+RODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+
 # WiFi
 PRODUCT_PACKAGES += \
     libwpa_client \
