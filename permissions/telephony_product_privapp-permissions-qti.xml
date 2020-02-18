@@ -28,7 +28,7 @@
   -->
 
 <!--
-This XML file declares which signature|privileged permissions should be
+This XML file declares which signature privileged permissions should be
 granted to privileged applications on QTI devices.
 It allows additional grants on top of privapp-permissions-platform.xml
 -->
