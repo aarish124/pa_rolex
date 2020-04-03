@@ -56,6 +56,4 @@ BUILD_FINGERPRINT := "Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.3.0.NDAMIEK:user/rele
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
-include device/qcom/common/common.mk
-
 endif
