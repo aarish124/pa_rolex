@@ -6,3 +6,10 @@
     "revision":    "q-3.18-upstream"
   }
 }
+
+{
+    "remote":      "aospa",
+    "repository":  "AOSPA/android_device_qcom_common", 
+    "target_path": "device/qcom/common",
+    "revision":    "quartz"
+},
